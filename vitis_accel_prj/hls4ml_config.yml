@@ -1,0 +1,101 @@
+AcceleratorConfig:
+  Batchsize: 8192
+  Board: alveo-u55c
+  HW_Quant: false
+  Num_Kernel: 2
+  Num_Worker: 2
+  Platform: null
+  Vivado_Directives: null
+Backend: VitisAccelerator
+ClockPeriod: 25
+ClockUncertainty: 27%
+HLSConfig:
+  LayerName:
+    BN1:
+      Precision:
+        beta: fixed<16,6,TRN,WRAP,0>
+        bias: ap_fixed<14,0>
+        gamma: fixed<16,6,TRN,WRAP,0>
+        mean: fixed<16,6,TRN,WRAP,0>
+        result: ap_fixed<32,5>
+        scale: fixed<16,6>
+        variance: fixed<16,6,TRN,WRAP,0>
+      Strategy: Latency
+      Trace: true
+    BN2:
+      Precision:
+        beta: fixed<16,6,TRN,WRAP,0>
+        bias: ap_fixed<14,0>
+        gamma: fixed<16,6,TRN,WRAP,0>
+        mean: fixed<16,6,TRN,WRAP,0>
+        result: ap_fixed<27,3>
+        scale: fixed<16,6>
+        variance: fixed<16,6,TRN,WRAP,0>
+      Strategy: Latency
+      Trace: true
+    dense1:
+      Precision:
+        bias: ap_fixed<11,0>
+        result: ap_fixed<32,5>
+        weight: ap_fixed<11,0>
+      Strategy: Latency
+      Trace: true
+    dense1_linear:
+      Precision:
+        result: fixed<16,6>
+      Strategy: Latency
+      Trace: true
+    dense2:
+      Precision:
+        bias: ap_fixed<11,0>
+        result: ap_fixed<21,3>
+        weight: ap_fixed<11,0>
+      Strategy: Latency
+      Trace: true
+    dense2_linear:
+      Precision:
+        result: fixed<16,6>
+      Strategy: Latency
+      Trace: true
+    inputs:
+      Precision:
+        result: ap_fixed<15,6>
+      Strategy: Latency
+      Trace: true
+    relu1:
+      Precision:
+        result: fixed<15,1,RND_CONV,SAT,0>
+      Strategy: Latency
+      Trace: true
+    relu2:
+      Precision:
+        result: fixed<15,1,RND_CONV,SAT,0>
+      Strategy: Latency
+      Trace: true
+    z_mean:
+      Precision:
+        bias: ap_fixed<11,6>
+        result: ap_fixed<20,1>
+        weight: ap_fixed<11,6>
+      Strategy: Latency
+      Trace: true
+    z_mean_linear:
+      Precision:
+        result: fixed<16,6>
+      Strategy: Latency
+      Trace: true
+  Model:
+    BramFactor: 1000000000
+    Precision: fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'vitis_accel_prj/keras_model.keras'
+OutputDir: vitis_accel_prj
+OutputPredictions: null
+Part: xcvu13p-flga2577-2-e
+ProjectName: myproject
+Stamp: C43C9E32
+Version: 1.0.0

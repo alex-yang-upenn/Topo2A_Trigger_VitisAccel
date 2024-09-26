@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+
+2A_AE_model_V9_BESTOFLONGRUN/
+
+vitis_accel_prj/build_hw_rel/xclbin/link/
+vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/
+vitis_accel_prj/.ipcache/
+
+*.tar.gz

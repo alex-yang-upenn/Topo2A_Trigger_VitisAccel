@@ -1,0 +1,606 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+/tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcl8.5/tzdata/UTC can't be opened.
+INFO: [HLS 200-10] For user 'user' on host 'egl' (Linux_x86_64 version 5.15.134+release+2.10.0r8-amd64) on Thu Oct 03 06:57:25 UTC 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper'
+Sourcing Tcl script 'kernel_wrapper.tcl'
+INFO: [HLS 200-1510] Running: open_project kernel_wrapper 
+INFO: [HLS 200-10] Creating and opening project '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper'.
+INFO: [HLS 200-1510] Running: set_top kernel_wrapper 
+INFO: [HLS 200-1510] Running: add_files /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp -cflags  -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils -std=c++11 
+INFO: [HLS 200-10] Adding design file '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp -cflags  -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights -I /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils -std=c++11 
+INFO: [HLS 200-10] Adding design file '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu55c-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu55c-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 40MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname kernel_wrapper 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=true 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_offset slave 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 27% 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 6.75ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 754.215 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'keep' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_helpers.h:285:99)
+WARNING: [HLS 207-5292] unused parameter 'data' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:11:36)
+WARNING: [HLS 207-5292] unused parameter 'buffer' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:12:36)
+WARNING: [HLS 207-5292] unused parameter 'partition' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:13:44)
+WARNING: [HLS 207-5292] unused parameter 'data' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:21:24)
+WARNING: [HLS 207-5292] unused parameter 'buffer' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:22:24)
+WARNING: [HLS 207-5292] unused parameter 'partition' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_code_gen.h:23:32)
+INFO: [HLS 200-10] Analyzing design file '/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 13.55 seconds. CPU system time: 1.93 seconds. Elapsed time: 172.64 seconds; current allocated memory: 759.945 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2::weight_t*, config2::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:42:27)
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::normalize<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, config4::scale_t*, config4::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:54:25)
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, config6::weight_t*, config6::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:42:27)
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::normalize<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<27, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config8>(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<27, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, config8::scale_t*, config8::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:54:25)
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<10, 6, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config10::weight_t*, config10::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:42:27)
+INFO: [HLS 214-131] Inlining function 'void nnet::dense<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2::weight_t*, config2::bias_t*)' into 'myproject(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:43:2)
+INFO: [HLS 214-131] Inlining function 'void nnet::dense<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, config6::weight_t*, config6::bias_t*)' into 'myproject(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:59:2)
+INFO: [HLS 214-131] Inlining function 'void nnet::dense<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config10::weight_t*, config10::bias_t*)' into 'myproject(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:75:2)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_23_2' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23:19)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:73:15)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:69:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:65:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:61:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:57:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:53:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:49:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:45:14)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:41:11)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_31_1' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:31:19)
+INFO: [HLS 214-291] Loop 'Result' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:64:5)
+INFO: [HLS 214-291] Loop 'Accum1' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:54:5)
+INFO: [HLS 214-291] Loop 'Accum2' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:56:9)
+INFO: [HLS 214-291] Loop 'ResetAccum' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:48:5)
+INFO: [HLS 214-291] Loop 'Product1' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:37:5)
+INFO: [HLS 214-291] Loop 'Product2' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:40:9)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:18:32)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:17:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_485_1' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:485:23)
+INFO: [HLS 214-291] Loop 'Result' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:52:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_7_2' is marked as complete unroll implied by the pipeline pragma (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:7:18)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_23_2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23:19) in function 'write_result' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:73:15) in function 'myproject' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:69:14) in function 'myproject' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:65:14) in function 'myproject' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:61:14) in function 'myproject' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:57:14) in function 'myproject' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:53:14) in function 'myproject' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:49:14) in function 'myproject' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:45:14) in function 'myproject' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:41:11) in function 'myproject' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:9:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:31:19) in function 'nnet::linear<ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, linear_config11>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:28:0)
+INFO: [HLS 214-186] Unrolling loop 'Result' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:64:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:54:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:56:9) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'ResetAccum' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:48:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:37:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:40:9) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:18:32) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 3 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:17:32) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 48 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_485_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:485:23) in function 'nnet::leaky_relu<ap_fixed<27, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, leaky_relu_config9>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:481:0)
+INFO: [HLS 214-186] Unrolling loop 'Result' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:52:5) in function 'nnet::normalize<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<27, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config8>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:33:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:31:19) in function 'nnet::linear<ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, linear_config7>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:28:0)
+INFO: [HLS 214-186] Unrolling loop 'Result' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:64:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:54:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:56:9) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'ResetAccum' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:48:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:37:5) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:40:9) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:18:32) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 16 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:17:32) in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 512 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_485_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:485:23) in function 'nnet::leaky_relu<ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, leaky_relu_config5>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:481:0)
+INFO: [HLS 214-186] Unrolling loop 'Result' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:52:5) in function 'nnet::normalize<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config4>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_batchnorm.h:33:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:31:19) in function 'nnet::linear<ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, linear_config3>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:28:0)
+INFO: [HLS 214-186] Unrolling loop 'Result' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:64:5) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:54:5) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 44 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Accum2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:56:9) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'ResetAccum' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:48:5) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:37:5) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 44 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'Product2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:40:9) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:18:32) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 32 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:17:32) in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' completely with a factor of 1408 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_7_2' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:7:18) in function 'read_input' completely with a factor of 44 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'std::enable_if<!(std::is_same<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>(config6::accum_t)' into 'void nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, config6::weight_t*, config6::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+INFO: [HLS 214-178] Inlining function 'std::enable_if<!(std::is_same<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(config10::accum_t)' into 'void nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config10::weight_t*, config10::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:15:0)
+WARNING: [HLS 214-267] Partition and reshape on the same dimension of 'out_buf' may not commute. Partition is applied first. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:38:18)
+INFO: [HLS 214-248] Applying array_partition to 'b10': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/b10.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'b8': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/b8.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 's8': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/s8.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'b6': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/b6.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'b4': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/b4.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 's4': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/s4.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'b2': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/weights/b2.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'mult': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:17:32)
+INFO: [HLS 214-248] Applying array_partition to 'layer2_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:41:11)
+INFO: [HLS 214-248] Applying array_partition to 'layer3_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:45:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer4_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:49:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer5_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:53:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer6_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:57:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer7_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:61:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer8_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:65:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer9_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:69:14)
+INFO: [HLS 214-248] Applying array_partition to 'layer10_out': Complete partitioning on dimension 1. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:73:15)
+INFO: [HLS 214-248] Applying array_partition to 'out_buf': Complete partitioning on dimension 2. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:38:18)
+INFO: [HLS 214-248] Applying array_reshape to 'in_buf': Complete reshaping on dimension 2. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:37:17)
+INFO: [HLS 214-364] Automatically inlining function 'std::enable_if<!(std::is_same<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<1> >::value), ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(config2::accum_t)' to improve effectiveness of pipeline pragma in function 'void nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>(ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2::weight_t*, config2::bias_t*)' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:66:21)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'out_buf_2'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:44:5)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'out_buf_1'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:44:5)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'out_buf_0'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:44:5)
+INFO: [HLS 214-115] Multiple burst writes of length 24576 and bit width 16 in loop 'VITIS_LOOP_21_1'(/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:21:22) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:21:22)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 47.88 seconds. CPU system time: 1.3 seconds. Elapsed time: 73.23 seconds; current allocated memory: 764.184 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 764.184 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.95 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.08 seconds; current allocated memory: 868.094 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.49 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.55 seconds; current allocated memory: 970.918 MB.
+INFO: [XFORM 203-721] Extract dataflow region from loop VITIS_LOOP_15_1 (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:17)  of function 'run_inference'.
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_VITIS_LOOP_15_1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:16:2), detected/extracted 1 process function(s): 
+	 'myproject'.
+INFO: [XFORM 203-712] Applying dataflow to function 'kernel_wrapper' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:36:1), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'read_input'
+	 'run_inference'
+	 'write_result'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:482:9) to (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:492:1) in function 'nnet::leaky_relu<ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, leaky_relu_config5>'... converting 161 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:482:9) to (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_activation.h:492:1) in function 'nnet::leaky_relu<ap_fixed<27, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, leaky_relu_config9>'... converting 81 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<15, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 5, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:33:1)...1185 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<21, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:33:1)...436 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_latency<ap_fixed<15, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<20, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/nnet_utils/nnet_dense_latency.h:33:1)...44 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.09 seconds. CPU system time: 0.1 seconds. Elapsed time: 3.2 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'in_buf' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_buf_0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp:77:5)
+WARNING: [HLS 200-1449] Process dataflow_in_loop_VITIS_LOOP_15_1 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2.33 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.43 seconds; current allocated memory: 1.308 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kernel_wrapper' ...
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed<15, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config2>' to 'dense_latency_ap_fixed_15_6_5_3_0_ap_fixed_32_5_5_3_0_config2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'linear<ap_fixed<32, 5, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config3>' to 'linear_ap_fixed_32_5_5_3_0_ap_fixed_16_6_5_3_0_linear_config3_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config4>' to 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_32_5_5_3_0_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config5>' to 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config5_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<21, 3, 5, 3, 0>, config6>' to 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_21_3_5_3_0_config6_s'.
+WARNING: [SYN 201-103] Legalizing function name 'linear<ap_fixed<21, 3, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config7>' to 'linear_ap_fixed_21_3_5_3_0_ap_fixed_16_6_5_3_0_linear_config7_s'.
+WARNING: [SYN 201-103] Legalizing function name 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<27, 3, 5, 3, 0>, config8>' to 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_27_3_5_3_0_config8_s'.
+WARNING: [SYN 201-103] Legalizing function name 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config9>' to 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config9_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<20, 1, 5, 3, 0>, config10>' to 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_20_1_5_3_0_config10_s'.
+WARNING: [SYN 201-103] Legalizing function name 'linear<ap_fixed<20, 1, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config11>' to 'linear_ap_fixed_20_1_5_3_0_ap_fixed_16_6_5_3_0_linear_config11_s'.
+WARNING: [SYN 201-223] Checking resource limit in 'dense_latency<ap_fixed<15, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config2>': cannot find any operation of 'mul'.
+WARNING: [SYN 201-223] Checking resource limit in 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<21, 3, 5, 3, 0>, config6>': cannot find any operation of 'mul'.
+WARNING: [SYN 201-223] Checking resource limit in 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<20, 1, 5, 3, 0>, config10>': cannot find any operation of 'mul'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.6 seconds; current allocated memory: 1.309 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.309 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_5_1'.
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_1_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_2_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_3_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_4_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_35_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'read_input' (loop 'VITIS_LOOP_5_1'): Unable to schedule bus request operation ('gmem0_load_43_req', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) on port 'gmem0' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:9) due to limited memory ports (II = 43). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 44, Depth = 116, loop 'VITIS_LOOP_5_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.35 seconds. CPU system time: 0 seconds. Elapsed time: 1.47 seconds; current allocated memory: 1.316 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.77 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.02 seconds; current allocated memory: 1.319 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_15_6_5_3_0_ap_fixed_32_5_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed<15, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config2>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'dense_latency<ap_fixed<15, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config2>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.31 seconds; current allocated memory: 1.340 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.68 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.94 seconds; current allocated memory: 1.340 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'linear_ap_fixed_32_5_5_3_0_ap_fixed_16_6_5_3_0_linear_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'linear<ap_fixed<32, 5, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config3>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'linear<ap_fixed<32, 5, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config3>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5.82 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.02 seconds; current allocated memory: 1.340 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.340 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_32_5_5_3_0_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config4>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<32, 5, 5, 3, 0>, config4>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.340 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.340 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config5>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config5>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.46 seconds. CPU system time: 0 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.356 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.16 seconds; current allocated memory: 1.356 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_21_3_5_3_0_config6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<21, 3, 5, 3, 0>, config6>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<21, 3, 5, 3, 0>, config6>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.45 seconds; current allocated memory: 1.367 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.67 seconds. CPU system time: 0 seconds. Elapsed time: 1.73 seconds; current allocated memory: 1.367 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'linear_ap_fixed_21_3_5_3_0_ap_fixed_16_6_5_3_0_linear_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'linear<ap_fixed<21, 3, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config7>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'linear<ap_fixed<21, 3, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config7>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.67 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.85 seconds; current allocated memory: 1.367 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.367 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_27_3_5_3_0_config8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<27, 3, 5, 3, 0>, config8>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'normalize<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<27, 3, 5, 3, 0>, config8>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.73 seconds; current allocated memory: 1.367 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.367 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config9_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config9>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'leaky_relu<ap_fixed,ap_fixed<15,1,4,0,0>,leaky_relu_config9>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.74 seconds. CPU system time: 0 seconds. Elapsed time: 0.83 seconds; current allocated memory: 1.375 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.09 seconds; current allocated memory: 1.375 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_20_1_5_3_0_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<20, 1, 5, 3, 0>, config10>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'dense_latency<ap_fixed<15, 1, 4, 0, 0>, ap_fixed<20, 1, 5, 3, 0>, config10>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.46 seconds. CPU system time: 0 seconds. Elapsed time: 2.56 seconds; current allocated memory: 1.376 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.376 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'linear_ap_fixed_20_1_5_3_0_ap_fixed_16_6_5_3_0_linear_config11_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'linear<ap_fixed<20, 1, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config11>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'linear<ap_fixed<20, 1, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, linear_config11>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.62 seconds; current allocated memory: 1.376 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.376 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'myproject'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, function 'myproject'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.25 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.5 seconds. CPU system time: 0 seconds. Elapsed time: 12.7 seconds; current allocated memory: 1.378 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.06 seconds. CPU system time: 0 seconds. Elapsed time: 4.32 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'run_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.65 seconds. CPU system time: 0.01 seconds. Elapsed time: 13 seconds; current allocated memory: 1.379 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.14 seconds. CPU system time: 0 seconds. Elapsed time: 4.33 seconds; current allocated memory: 1.379 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_result_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+WARNING: [HLS 200-880] The II Violation in module 'write_result_Pipeline_VITIS_LOOP_21_1' (loop 'VITIS_LOOP_21_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write operation ('gmem1_addr_write_ln23', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) on port 'gmem1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) and bus write operation ('gmem1_addr_write_ln23', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) on port 'gmem1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'write_result_Pipeline_VITIS_LOOP_21_1' (loop 'VITIS_LOOP_21_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write operation ('gmem1_addr_write_ln23', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) on port 'gmem1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) and bus write operation ('gmem1_addr_write_ln23', /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23) on port 'gmem1' (/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 5, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.61 seconds. CPU system time: 0.02 seconds. Elapsed time: 13.12 seconds; current allocated memory: 1.379 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.379 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.379 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.379 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_wrapper' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.379 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.31 seconds; current allocated memory: 1.380 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.59 seconds. CPU system time: 0 seconds. Elapsed time: 12.84 seconds; current allocated memory: 1.380 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'read_input' pipeline 'VITIS_LOOP_5_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_input'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.385 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_15_6_5_3_0_ap_fixed_32_5_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_15_6_5_3_0_ap_fixed_32_5_5_3_0_config2_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.18 seconds; current allocated memory: 1.415 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'linear_ap_fixed_32_5_5_3_0_ap_fixed_16_6_5_3_0_linear_config3_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'linear_ap_fixed_32_5_5_3_0_ap_fixed_16_6_5_3_0_linear_config3_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 14.23 seconds. CPU system time: 0.17 seconds. Elapsed time: 14.59 seconds; current allocated memory: 1.476 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_32_5_5_3_0_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_18ns_32_1_1': 31 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_19ns_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_32_5_5_3_0_config4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.54 seconds; current allocated memory: 1.486 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config5_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config5_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.87 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.04 seconds; current allocated memory: 1.501 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_21_3_5_3_0_config6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_21_3_5_3_0_config6_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 11.27 seconds. CPU system time: 0.11 seconds. Elapsed time: 11.47 seconds; current allocated memory: 1.543 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'linear_ap_fixed_21_3_5_3_0_ap_fixed_16_6_5_3_0_linear_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'linear_ap_fixed_21_3_5_3_0_ap_fixed_16_6_5_3_0_linear_config7_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6.54 seconds. CPU system time: 0.09 seconds. Elapsed time: 6.86 seconds; current allocated memory: 1.577 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_27_3_5_3_0_config8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_15ns_27_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'normalize_ap_fixed_16_6_5_3_0_ap_fixed_27_3_5_3_0_config8_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.594 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config9_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'leaky_relu_ap_fixed_ap_fixed_15_1_4_0_0_leaky_relu_config9_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.596 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_20_1_5_3_0_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_latency_ap_fixed_15_1_4_0_0_ap_fixed_20_1_5_3_0_config10_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5.57 seconds. CPU system time: 0.07 seconds. Elapsed time: 5.86 seconds; current allocated memory: 1.605 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'linear_ap_fixed_20_1_5_3_0_ap_fixed_16_6_5_3_0_linear_config11_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'linear_ap_fixed_20_1_5_3_0_ap_fixed_16_6_5_3_0_linear_config11_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.21 seconds; current allocated memory: 1.626 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'myproject' pipeline 'myproject' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.631 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_VITIS_LOOP_15_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.63 seconds. CPU system time: 0.02 seconds. Elapsed time: 12.96 seconds; current allocated memory: 1.640 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'run_inference' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'run_inference'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.52 seconds. CPU system time: 0 seconds. Elapsed time: 12.66 seconds; current allocated memory: 1.643 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_result_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'write_result_Pipeline_VITIS_LOOP_21_1' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_result_Pipeline_VITIS_LOOP_21_1/m_axi_gmem1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_result_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.67 seconds. CPU system time: 0.02 seconds. Elapsed time: 13.36 seconds; current allocated memory: 1.643 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_result'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.643 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_wrapper' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_wrapper/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_wrapper/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_wrapper/in_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_wrapper/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel_wrapper' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'in_r', 'out_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_wrapper'.
+INFO: [HLS 200-741] Implementing PIPO kernel_wrapper_in_buf_V_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'kernel_wrapper_in_buf_V_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-741] Implementing PIPO kernel_wrapper_out_buf_V_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'kernel_wrapper_out_buf_V_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'out_r_c_U(kernel_wrapper_fifo_w64_d4_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.02 seconds. Elapsed time: 11.13 seconds; current allocated memory: 1.646 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 21.98 seconds. CPU system time: 0.06 seconds. Elapsed time: 24.61 seconds; current allocated memory: 1.648 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.08 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.69 seconds; current allocated memory: 1.664 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kernel_wrapper.
+INFO: [VLOG 209-307] Generating Verilog RTL for kernel_wrapper.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 54.79 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 278.65 seconds. CPU system time: 4.6 seconds. Elapsed time: 494.82 seconds; current allocated memory: 950.051 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:02:02 . Memory (MB): peak = 1797.328 ; gain = 85.992 ; free physical = 414693 ; free virtual = 872443
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Running package_xo -xo_path /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/impl/export.xo -kernel_name kernel_wrapper -kernel_xml /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/impl/ip/../kernel/kernel.xml -kernel_files {/home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/firmware/myproject.cpp /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/kernel_wrapper.cpp} -ip_directory /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/impl/ip/ip_unzip_dir -design_xml /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/.autopilot/db/kernel_wrapper.design.xml -debug_directory /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/.debug -hls_directory /home/ayvol/Topo2A_Trigger_VitisAccel/vitis_accel_prj/build_hw_rel/xo/myproject_kernel/kernel_wrapper/kernel_wrapper/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  3 07:31:56 2024...
+INFO: [HLS 200-802] Generated output file kernel_wrapper/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 18.32 seconds. CPU system time: 2.4 seconds. Elapsed time: 784.1 seconds; current allocated memory: 11.578 MB.
+INFO: [HLS 200-1510] Running: close_project 
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 299.88 seconds. Total CPU system time: 8.24 seconds. Total elapsed time: 2315.27 seconds; peak allocated memory: 1.676 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Oct  3 07:32:08 2024...
